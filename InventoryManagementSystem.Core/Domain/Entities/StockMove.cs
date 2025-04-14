@@ -28,5 +28,6 @@ namespace InventoryManagementSystem.Core.Domain.Entities
 
         public int? ResponsibleStaffId { get; set; } // الموظف المسؤول
         public WarehouseStaff? ResponsibleStaff { get; set; }
+
     }
 }
