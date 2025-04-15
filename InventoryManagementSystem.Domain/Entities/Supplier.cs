@@ -1,7 +1,7 @@
-﻿using InventoryManagementSystem.Core.Domain.Common;
+﻿using InventoryManagementSystem.Domain.Common;
 using System.Collections.ObjectModel;
 
-namespace InventoryManagementSystem.Core.Domain.Entities
+namespace InventoryManagementSystem.Domain.Entities
 {
     public class Supplier :BaseAuditableEntity<int>
     {
@@ -10,7 +10,7 @@ namespace InventoryManagementSystem.Core.Domain.Entities
         public required string CompanyName { get; set; }
 
         public required  string Address { get; set; }
-        public ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product> Products { get; set; }=new HashSet<Product> ();
 
 
     }

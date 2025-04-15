@@ -1,6 +1,6 @@
-﻿using InventoryManagementSystem.Core.Domain.Common;
+﻿using InventoryManagementSystem.Domain.Common;
 
-namespace InventoryManagementSystem.Core.Domain.Entities
+namespace InventoryManagementSystem.Domain.Entities
 {
     public class StockMove :BaseAuditableEntity<int>
     {
@@ -18,16 +18,16 @@ namespace InventoryManagementSystem.Core.Domain.Entities
         public decimal? TransferCost { get; set; }
 
         public int ProductId { get; set; }
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
 
         public int SourceLocationId { get; set; } // المخزن المصدر
-        public Location SourceLocation { get; set; }
+        public virtual Location SourceLocation { get; set; }
 
         public int DestinationLocationId { get; set; } // المخزن الهدف
-        public Location DestinationLocation { get; set; }
+        public virtual Location DestinationLocation { get; set; }
 
         public int? ResponsibleStaffId { get; set; } // الموظف المسؤول
-        public WarehouseStaff? ResponsibleStaff { get; set; }
+        public virtual WarehouseStaff? ResponsibleStaff { get; set; }
 
     }
 }

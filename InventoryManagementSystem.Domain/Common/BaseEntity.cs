@@ -1,4 +1,4 @@
-﻿namespace InventoryManagementSystem.Core.Domain.Common
+﻿namespace InventoryManagementSystem.Domain.Common
 {
     public class BaseEntity<TKey> where TKey :IEquatable<TKey>
     {

@@ -1,13 +1,13 @@
-﻿using InventoryManagementSystem.Core.Domain.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using InventoryManagementSystem.Domain.Common;
 
-namespace InventoryManagementSystem.Core.Domain.Entities
+namespace InventoryManagementSystem.Domain.Entities
 {
     public class Customer : BaseAuditableEntity<int>
     {
@@ -16,14 +16,12 @@ namespace InventoryManagementSystem.Core.Domain.Entities
       
         public int LoyaltyPoints { get; set; } = 0; // نقاط الولاء
 
-        [StringLength(200)]
         public string? Address { get; set; } // العنوان
 
-        [StringLength(50)]
         public string? CustomerType { get; set; } // "عادي", "تاجر", "شركة"
 
         // العلاقات
-        public ICollection<Order> Orders { get; set; } 
+        public virtual ICollection<Order> Orders { get; set; }= new HashSet<Order>();
 
         public string? TaxNumber { get; set; } // الرقم الضريبي
 

@@ -1,8 +1,8 @@
-﻿using InventoryManagementSystem.Core.Domain.Common;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using InventoryManagementSystem.Domain.Common;
 
-namespace InventoryManagementSystem.Core.Domain.Entities
+namespace InventoryManagementSystem.Domain.Entities
 {
     public class Inventory : BaseAuditableEntity<int>
     {
@@ -17,12 +17,14 @@ namespace InventoryManagementSystem.Core.Domain.Entities
 
         public string? ApprovedBy { get; set; } // اسم المدير الاي وافق
 
-         public ICollection<InventoryLine> InventoryLines { get; set; } 
+         public  virtual ICollection<InventoryLine> InventoryLines { get; set; } = new HashSet<InventoryLine>(); 
 
         public int? LocationId { get; set; }
-        public Location? Location { get; set; }
+        public virtual Location? Location { get; set; }
 
-       
-       
+        public virtual ICollection<Report> Reports { get; set; } = new HashSet<Report>();
+
+
+
     }
 }

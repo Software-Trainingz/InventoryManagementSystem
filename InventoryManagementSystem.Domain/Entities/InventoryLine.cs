@@ -1,7 +1,7 @@
-﻿using InventoryManagementSystem.Core.Domain.Common;
+﻿using InventoryManagementSystem.Domain.Common;
 using System.ComponentModel.DataAnnotations;
 
-namespace InventoryManagementSystem.Core.Domain.Entities
+namespace InventoryManagementSystem.Domain.Entities
 {
     public class InventoryLine :BaseAuditableEntity<int>
     {
@@ -19,10 +19,10 @@ namespace InventoryManagementSystem.Core.Domain.Entities
 
         // العلاقات
         public int InventoryId { get; set; }
-        public Inventory Inventory { get; set; }
+        public virtual Inventory Inventory { get; set; } 
 
         public int ProductId { get; set; }
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
 
     }
 }

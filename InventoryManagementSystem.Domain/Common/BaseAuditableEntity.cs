@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InventoryManagementSystem.Core.Domain.Common
+namespace InventoryManagementSystem.Domain.Common
 {
     public class BaseAuditableEntity<TKey> : BaseEntity<TKey>
         where TKey : IEquatable<TKey>

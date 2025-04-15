@@ -1,13 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35828.75 d17.13
+VisualStudioVersion = 17.13.35828.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagementSystem.APIs", "InventoryManagementSystem\InventoryManagementSystem.APIs.csproj", "{DDA7934B-517E-4052-8CAD-002ED06B6FA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagementSystem.Core", "InventoryManagementSystem.Core\InventoryManagementSystem.Core.csproj", "{129E1B78-632F-4D74-807D-982331974B8E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagementSystem.Infrastucture", "InventoryManagementSystem.Infrastucture\InventoryManagementSystem.Infrastucture.csproj", "{CF3D59D6-9727-4161-8F8F-D4E543D0B87C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{A623FCA6-64E1-42A5-B619-9E6DB0E02E4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagementSystem.Domain", "InventoryManagementSystem.Domain\InventoryManagementSystem.Domain.csproj", "{06F9B2ED-FEC7-46E8-B266-EF375F4B5124}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagementSystem.Application", "InventoryManagementSystem.Domain.Application\InventoryManagementSystem.Application.csproj", "{F2DE93C2-FD94-4793-BB8A-95D6A8C813F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{F985AC01-6DE1-4BCE-892A-9896065F29E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{CB614078-53EE-47A0-9D02-0EB0B8670104}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{588E75B2-8813-4E40-A0AB-EFE1D5A07F9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,17 +31,29 @@ Global
 		{DDA7934B-517E-4052-8CAD-002ED06B6FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDA7934B-517E-4052-8CAD-002ED06B6FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDA7934B-517E-4052-8CAD-002ED06B6FA9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{129E1B78-632F-4D74-807D-982331974B8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{129E1B78-632F-4D74-807D-982331974B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{129E1B78-632F-4D74-807D-982331974B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{129E1B78-632F-4D74-807D-982331974B8E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CF3D59D6-9727-4161-8F8F-D4E543D0B87C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CF3D59D6-9727-4161-8F8F-D4E543D0B87C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF3D59D6-9727-4161-8F8F-D4E543D0B87C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF3D59D6-9727-4161-8F8F-D4E543D0B87C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06F9B2ED-FEC7-46E8-B266-EF375F4B5124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06F9B2ED-FEC7-46E8-B266-EF375F4B5124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06F9B2ED-FEC7-46E8-B266-EF375F4B5124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06F9B2ED-FEC7-46E8-B266-EF375F4B5124}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2DE93C2-FD94-4793-BB8A-95D6A8C813F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2DE93C2-FD94-4793-BB8A-95D6A8C813F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2DE93C2-FD94-4793-BB8A-95D6A8C813F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2DE93C2-FD94-4793-BB8A-95D6A8C813F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DDA7934B-517E-4052-8CAD-002ED06B6FA9} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{CF3D59D6-9727-4161-8F8F-D4E543D0B87C} = {F985AC01-6DE1-4BCE-892A-9896065F29E3}
+		{06F9B2ED-FEC7-46E8-B266-EF375F4B5124} = {588E75B2-8813-4E40-A0AB-EFE1D5A07F9B}
+		{F2DE93C2-FD94-4793-BB8A-95D6A8C813F4} = {CB614078-53EE-47A0-9D02-0EB0B8670104}
+		{CB614078-53EE-47A0-9D02-0EB0B8670104} = {A623FCA6-64E1-42A5-B619-9E6DB0E02E4D}
+		{588E75B2-8813-4E40-A0AB-EFE1D5A07F9B} = {A623FCA6-64E1-42A5-B619-9E6DB0E02E4D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BCBAAAF4-6332-4939-87B4-BB3DFB772130}
