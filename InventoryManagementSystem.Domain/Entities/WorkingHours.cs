@@ -1,9 +1,10 @@
-﻿namespace InventoryManagementSystem.Domain.Entities
+﻿using InventoryManagementSystem.Domain.Common;
+
+namespace InventoryManagementSystem.Domain.Entities
 {
-    public class WorkingHours
+    public class WorkingHours : BaseEntity<int>
     {
-        public int Id { get; set; }
-        public int RestaurantId { get; set; }
+         public int ? RestaurantId { get; set; }
         public virtual Restaurant Restaurant { get; set; }
         public DayOfWeek DayOfWeek { get; set; }
         public TimeSpan OpenTime { get; set; }

@@ -1,0 +1,17 @@
+[
+  {
+    "DayOfWeek": "Sunday",
+    "OpenTime": "10:00:00",
+    "CloseTime": "23:00:00",
+    "IsClosed": false,
+    "RestaurantId": 1
+  },
+  {
+    "DayOfWeek": "Monday",
+    "OpenTime": "10:00:00",
+    "CloseTime": "23:00:00",
+    "IsClosed": false,
+    "RestaurantId": 1 
+  }
+  
+]

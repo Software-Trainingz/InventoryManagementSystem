@@ -1,9 +1,10 @@
-﻿namespace InventoryManagementSystem.Domain.Entities
+﻿using InventoryManagementSystem.Domain.Common;
+
+namespace InventoryManagementSystem.Domain.Entities
 {
-    public class ProductOption
+    public class ProductOption :BaseAuditableEntity<int>
     {
-        public int OptionId { get; set; }
-        public int ProductId { get; set; }
+         public int? ProductId { get; set; }
         public virtual Product Product { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }

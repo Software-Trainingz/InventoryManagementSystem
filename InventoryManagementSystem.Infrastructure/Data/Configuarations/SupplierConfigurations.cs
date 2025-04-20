@@ -10,16 +10,19 @@ using System.Threading.Tasks;
 
 namespace InventoryManagementSystem.Infrastucture.Data.Configuarations
 {
-    class AdminConfigurations :BaseEntityConfigurations<Admin,int>
+    class SupplierConfigurations :BaseAuditableEntityConfigurations<Supplier,int>
     {
-        public override void Configure(EntityTypeBuilder<Admin> builder)
+        public override void Configure(EntityTypeBuilder<Supplier> builder)
         {
             base.Configure(builder);
-            builder.Property(A => A.Name)
-                .HasMaxLength(50)
-                .IsRequired();
+            builder.Property(S=>S.Name).IsRequired()
+                .HasMaxLength(50);
+            builder.Property(S=>S.Address)
+                .IsRequired() .HasMaxLength(50);
 
- 
+            builder.Property(S=>S.CompanyName)
+                .IsRequired()
+                .HasMaxLength (50);
         }
     }
 }

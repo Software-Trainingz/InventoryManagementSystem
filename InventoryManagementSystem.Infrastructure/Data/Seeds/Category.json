@@ -1,0 +1,32 @@
+[
+  {
+    "Name": "وجبات سريعة",
+    "Description": "مطاعم الوجبات السريعة والسناكس",
+    "ImageUrl": "/images/categories/fast-food.jpg",
+    "TalabatCategoryId": 101,
+    "CreatedOn": "2023-01-10T00:00:00",
+    "LastModifiedOn": "2023-01-10T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  },
+  {
+    "Name": "مشويات",
+    "Description": "مطاعم المشويات والشواء",
+    "ImageUrl": "/images/categories/grills.jpg",
+    "TalabatCategoryId": 102,
+    "CreatedOn": "2023-01-10T00:00:00",
+    "LastModifiedOn": "2023-01-10T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  },
+  {
+    "Name": "حلويات",
+    "Description": "محلات الحلويات والمخبوزات",
+    "ImageUrl": "/images/categories/desserts.jpg",
+    "TalabatCategoryId": 103,
+    "CreatedOn": "2023-01-10T00:00:00",
+    "LastModifiedOn": "2023-01-10T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  }
+]

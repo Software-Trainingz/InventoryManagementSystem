@@ -1,0 +1,13 @@
+[
+  {
+    "AdminId": 1,
+    "ProductId": 1,
+    "InventoryId": 1,
+    "Name": "Monthly Sales Report",
+    "Type": "Sales",
+    "Format": "PDF",
+    "Parameters": "Month=January",
+    "StoragePath": "/reports/sales/january.pdf",
+    "CreatedAt": "2025-04-01T10:00:00"
+  }
+]

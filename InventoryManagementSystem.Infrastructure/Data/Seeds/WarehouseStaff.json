@@ -1,0 +1,32 @@
+[
+  {
+    "Name": "أحمد علي",
+    "Position": "مدير مخزن",
+    "Shift": "صباحي",
+    "AdminId": 1,
+    "CreatedOn": "2023-01-10T00:00:00",
+    "LastModifiedOn": "2023-01-10T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  },
+  {
+    "Name": "سمير محمود",
+    "Position": "أمين مخزن",
+    "Shift": "مسائي",
+    "AdminId": 1,
+    "CreatedOn": "2023-01-15T00:00:00",
+    "LastModifiedOn": "2023-01-15T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  },
+  {
+    "Name": "هدى سامي",
+    "Position": "مساعد أمين مخزن",
+    "Shift": "صباحي",
+    "AdminId": 2,
+    "CreatedOn": "2023-02-01T00:00:00",
+    "LastModifiedOn": "2023-02-01T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "Name": "جرد نهاية العام لمخزن القاهرة",
+    "StartDate": "2023-12-25T00:00:00",
+    "EndDate": "2023-12-31T00:00:00",
+    "Status": "مكتمل",
+    "ApprovedBy": "أحمد محمد",
+    "LocationId": 1,
+    "CreatedOn": "2023-12-25T00:00:00",
+    "LastModifiedOn": "2023-12-31T00:00:00",
+    "CreatedBy": "محمود حسن",
+    "LastModifiedBy": "أحمد محمد"
+  },
+  {
+    "Name": "جرد ربع سنوي لمخزن الإسكندرية",
+    "StartDate": "2024-03-15T00:00:00",
+    "EndDate": null,
+    "Status": "قيد التنفيذ",
+    "ApprovedBy": null,
+    "LocationId": 2,
+    "CreatedOn": "2024-03-15T00:00:00",
+    "LastModifiedOn": "2024-03-15T00:00:00",
+    "CreatedBy": "فاطمة أحمد",
+    "LastModifiedBy": "فاطمة أحمد"
+  },
+  {
+    "Name": "جرد مفاجئ لمخزن المنصورة",
+    "StartDate": "2024-02-10T00:00:00",
+    "EndDate": "2024-02-11T00:00:00",
+    "Status": "مكتمل",
+    "ApprovedBy": "سارة علي",
+    "LocationId": 3,
+    "CreatedOn": "2024-02-10T00:00:00",
+    "LastModifiedOn": "2024-02-11T00:00:00",
+    "CreatedBy": "خالد محمود",
+    "LastModifiedBy": "سارة علي"
+  }
+]

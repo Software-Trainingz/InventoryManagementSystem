@@ -9,9 +9,7 @@ namespace InventoryManagementSystem.Domain.Entities
 
         public required string CompanyName { get; set; }
 
-        public required  string Address { get; set; }
+        public required string Address { get; set; }
         public virtual ICollection<Product> Products { get; set; }=new HashSet<Product> ();
-
-
     }
 }

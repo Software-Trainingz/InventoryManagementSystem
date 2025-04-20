@@ -1,0 +1,44 @@
+[
+  {
+    "OrderId": 1,
+    "ProductId": 1,
+    "ProductName": "دجاج مشوي",
+    "Quantity": 1,
+    "UnitPrice": 120.00,
+    "Discount": 0.00,
+    "LineTotal": 120.00,
+    "Notes": null,
+    "CreatedOn": "2024-04-10T18:30:00",
+    "LastModifiedOn": "2024-04-10T18:30:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  },
+  {
+    "OrderId": 1,
+    "ProductId": 2,
+    "ProductName": "برجر لحم",
+    "Quantity": 1,
+    "UnitPrice": 85.00,
+    "Discount": 0.00,
+    "LineTotal": 85.00,
+    "Notes": "بدون بصل",
+    "CreatedOn": "2024-04-10T18:30:00",
+    "LastModifiedOn": "2024-04-10T18:30:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  },
+  {
+    "OrderId": 2,
+    "ProductId": 2,
+    "ProductName": "برجر لحم",
+    "Quantity": 1,
+    "UnitPrice": 85.00,
+    "Discount": 0.00,
+    "LineTotal": 85.00,
+    "Notes": null,
+    "CreatedOn": "2024-04-11T13:15:00",
+    "LastModifiedOn": "2024-04-11T13:15:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  }
+]

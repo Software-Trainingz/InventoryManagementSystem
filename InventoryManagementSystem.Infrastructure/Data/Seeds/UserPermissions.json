@@ -1,0 +1,41 @@
+[
+  {
+     "PermissionName": "إدارة المخزون",
+    "Description": "إدارة كاملة للمخزون والجرد",
+    "Module": "المخزون",
+    "CanCreate": true,
+    "CanUpdate": true,
+    "CanDelete": true,
+    "AdminId": 1,
+    "CreatedOn": "2023-01-01T00:00:00",
+    "LastModifiedOn": "2023-01-01T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  },
+  {
+     "PermissionName": "إدارة المنتجات",
+    "Description": "إدارة كاملة للمنتجات",
+    "Module": "المنتجات",
+    "CanCreate": true,
+    "CanUpdate": true,
+    "CanDelete": true,
+    "AdminId": 1,
+    "CreatedOn": "2023-01-01T00:00:00",
+    "LastModifiedOn": "2023-01-01T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  },
+  {
+     "PermissionName": "عرض التقارير",
+    "Description": "عرض تقارير النظام",
+    "Module": "التقارير",
+    "CanCreate": false,
+    "CanUpdate": false,
+    "CanDelete": false,
+    "AdminId": 2,
+    "CreatedOn": "2023-01-01T00:00:00",
+    "LastModifiedOn": "2023-01-01T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  }
+]

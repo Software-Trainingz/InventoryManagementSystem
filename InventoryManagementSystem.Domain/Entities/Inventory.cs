@@ -1,30 +1,27 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using InventoryManagementSystem.Domain.Common;
 using System.ComponentModel.DataAnnotations;
-using InventoryManagementSystem.Domain.Common;
 
 namespace InventoryManagementSystem.Domain.Entities
 {
     public class Inventory : BaseAuditableEntity<int>
     {
+        public string Name { get; set; }
 
-        
-        public string Name { get; set; } // مثال: "جرد ربع سنوي لمخزن القاهرة"
+        public DateTime StartDate { get; set; } = DateTime.UtcNow;
 
-        public DateTime StartDate { get; set; } = DateTime.Now;
+        public DateTime? EndDate { get; set; }
 
-        public DateTime? EndDate { get; set; } // null يعني الجرد لسه مستمر
-        public string Status { get; set; } = "Draft"; // Draft, InProgress, Completed, Cancelled
+        [Required]
+        [MaxLength(50)]
+        public string Status { get; set; }
 
-        public string? ApprovedBy { get; set; } // اسم المدير الاي وافق
+        [MaxLength(50)]
+        public string? ApprovedBy { get; set; }
 
-         public  virtual ICollection<InventoryLine> InventoryLines { get; set; } = new HashSet<InventoryLine>(); 
+        // Relationships
+        public int ? LocationId { get; set; }
+        public virtual Location Location { get; set; }
 
-        public int? LocationId { get; set; }
-        public virtual Location? Location { get; set; }
-
-        public virtual ICollection<Report> Reports { get; set; } = new HashSet<Report>();
-
-
-
+        public virtual ICollection<InventoryLine> InventoryLines { get; set; } = new HashSet<InventoryLine>();
     }
 }

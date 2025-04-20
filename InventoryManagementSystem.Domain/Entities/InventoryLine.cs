@@ -1,5 +1,6 @@
 ﻿using InventoryManagementSystem.Domain.Common;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace InventoryManagementSystem.Domain.Entities
 {
@@ -7,21 +8,20 @@ namespace InventoryManagementSystem.Domain.Entities
     {
         // الكمية النظرية الموجودة في النظام
 
-        public float TheoreticalQty { get; set; }
+        public decimal TheoreticalQty { get; set; }
 
         // الكمية الفعلية بعد الجرد
-        public float CountedQty { get; set; }
+        public decimal CountedQty { get; set; }
 
         // الفرق بين النظرية والفعلي (تحسب تلقائيًا)
-        public float Difference => CountedQty - TheoreticalQty;
-
+        public decimal Difference { get; set; }
         public string? Notes { get; set; }
 
         // العلاقات
-        public int InventoryId { get; set; }
+        public int ? InventoryId { get; set; }
         public virtual Inventory Inventory { get; set; } 
 
-        public int ProductId { get; set; }
+        public int? ProductId { get; set; }
         public virtual Product Product { get; set; }
 
     }

@@ -11,7 +11,7 @@ namespace InventoryManagementSystem.Domain.Entities
 
         public required string Shift { get; set; }
 
-        public int AdminId { get; set; }
+        public int?  ManageById { get; set; }
         public virtual Admin ManageBy { get; set; }
 
 

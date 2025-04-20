@@ -1,0 +1,38 @@
+[
+  {
+    "TheoreticalQty": 100.00,
+    "CountedQty": 98.50,
+    "Difference": -1.50,
+    "Notes": "بعض العبوات تالفة",
+    "InventoryId": 1,
+    "ProductId": 1,
+    "CreatedOn": "2023-12-25T10:00:00",
+    "LastModifiedOn": "2023-12-25T10:00:00",
+    "CreatedBy": "محمود حسن",
+    "LastModifiedBy": "محمود حسن"
+  },
+  {
+    "TheoreticalQty": 50.00,
+    "CountedQty": 50.00,
+    "Difference": 0.00,
+    "Notes": null,
+    "InventoryId": 1,
+    "ProductId": 2,
+    "CreatedOn": "2023-12-25T11:30:00",
+    "LastModifiedOn": "2023-12-25T11:30:00",
+    "CreatedBy": "محمود حسن",
+    "LastModifiedBy": "محمود حسن"
+  },
+  {
+    "TheoreticalQty": 75.00,
+    "CountedQty": 70.00,
+    "Difference": -5.00,
+    "Notes": "نقص غير مبرر",
+    "InventoryId": 2,
+    "ProductId": 3,
+    "CreatedOn": "2024-03-15T09:15:00",
+    "LastModifiedOn": "2024-03-15T09:15:00",
+    "CreatedBy": "فاطمة أحمد",
+    "LastModifiedBy": "فاطمة أحمد"
+  }
+]

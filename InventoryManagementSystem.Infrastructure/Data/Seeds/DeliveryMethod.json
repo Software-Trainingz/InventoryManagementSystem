@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "توصيل عادي",
+    "Description": "توصيل خلال 60-90 دقيقة",
+    "Cost": 15.00,
+    "DeliveryTime": "60-90 دقيقة",
+    "TalabatDeliveryMethodId": 201
+  },
+  {
+    "Name": "توصيل سريع",
+    "Description": "توصيل خلال 30-45 دقيقة",
+    "Cost": 25.00,
+    "DeliveryTime": "30-45 دقيقة",
+    "TalabatDeliveryMethodId": 202
+  },
+  {
+    "Name": "استلام من المطعم",
+    "Description": "استلام الطلب مباشرة من المطعم",
+    "Cost": 0.00,
+    "DeliveryTime": "15-20 دقيقة",
+    "TalabatDeliveryMethodId": 203
+  }
+]

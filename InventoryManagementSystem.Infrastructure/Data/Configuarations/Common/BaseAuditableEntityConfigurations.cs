@@ -13,18 +13,18 @@ namespace InventoryManagementSystem.Infrastucture.Data.Configuarations.Common
         where TEntity : BaseAuditableEntity<TKey>
         where TKey : IEquatable<TKey>
     {
-        public void Configure(EntityTypeBuilder<TEntity> builder)
+        public virtual void Configure(EntityTypeBuilder<TEntity> builder)
         {
             builder.Property(x => x.Id)
                 .ValueGeneratedOnAdd()
                 .IsRequired();
 
             builder.Property(x=>x.CreatedBy)
-                .IsRequired()
+                .IsRequired(false)
                 .HasMaxLength(50);
 
             builder.Property(x => x.LastModifiedBy)
-                .IsRequired()
+                .IsRequired(false)
                 .HasMaxLength(50);
 
             builder.Property(x => x.CreatedOn)

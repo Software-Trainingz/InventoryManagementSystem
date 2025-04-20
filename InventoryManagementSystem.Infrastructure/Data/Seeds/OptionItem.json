@@ -1,0 +1,69 @@
+[
+  {
+    "Name": "صغير",
+    "Description": "وجبة صغيرة",
+    "AdditionalPrice": 0.00,
+    "IsDefault": true,
+    "CreatedOn": "2023-01-15T00:00:00",
+    "LastModifiedOn": "2024-04-01T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "محمود حسن"
+  },
+  {
+    "Name": "وسط",
+    "Description": "وجبة متوسطة",
+    "AdditionalPrice": 15.00,
+    "IsDefault": false,
+    "CreatedOn": "2023-01-15T00:00:00",
+    "LastModifiedOn": "2024-04-01T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "محمود حسن"
+  },
+  {
+    "Name": "كبير",
+    "Description": "وجبة كبيرة",
+    "AdditionalPrice": 30.00,
+    "IsDefault": false,
+    "CreatedOn": "2023-01-15T00:00:00",
+    "LastModifiedOn": "2024-04-01T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "محمود حسن"
+  },
+  {
+    "Name": "صوص ثوم",
+    "Description": "إضافة صوص ثوم",
+    "AdditionalPrice": 5.00,
+    "IsDefault": false,
+    "CreatedOn": "2023-01-15T00:00:00",
+    "LastModifiedOn": "2024-04-01T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "محمود حسن"
+  },
+  {
+    "Name": "جبنة إضافية",
+    "Description": "إضافة جبنة",
+    "AdditionalPrice": 10.00,
+    "CreatedOn": "2023-01-15T00:00:00",
+    "LastModifiedOn": "2024-04-01T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "محمود حسن"
+  },
+  {
+    "Name": "متوسط",
+    "Description": "درجة نضج متوسطة",
+    "AdditionalPrice": 0.00,
+    "CreatedOn": "2023-01-20T00:00:00",
+    "LastModifiedOn": "2024-04-05T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "محمود حسن"
+  },
+  {
+    "Name": "ويل دن",
+    "Description": "درجة نضج كاملة",
+    "AdditionalPrice": 0.00,
+    "CreatedOn": "2023-01-20T00:00:00",
+    "LastModifiedOn": "2024-04-05T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "محمود حسن"
+  }
+]

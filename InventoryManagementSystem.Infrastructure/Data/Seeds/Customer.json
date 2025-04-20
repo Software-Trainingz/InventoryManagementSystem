@@ -1,0 +1,38 @@
+[
+  {
+    "CustomerName": "محمد عبد الرحمن",
+    "LoyaltyPoints": 150,
+    "Address": "شارع النصر، مدينة نصر، القاهرة",
+    "CustomerType": "عادي",
+    "TaxNumber": null,
+    "Notes": "زبون منتظم",
+    "CreatedOn": "2023-01-15T00:00:00",
+    "LastModifiedOn": "2023-01-15T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  },
+  {
+    "CustomerName": "شركة الأمل للتجارة",
+    "LoyaltyPoints": 300,
+    "Address": "شارع التحرير، وسط البلد، القاهرة",
+    "CustomerType": "شركة",
+    "TaxNumber": "12345678",
+    "Notes": "شركة كبيرة تطلب بانتظام",
+    "CreatedOn": "2023-02-10T00:00:00",
+    "LastModifiedOn": "2023-02-10T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  },
+  {
+    "CustomerName": "سارة محمود",
+    "LoyaltyPoints": 75,
+    "Address": "شارع الهرم، الجيزة",
+    "CustomerType": "عادي",
+    "TaxNumber": null,
+    "Notes": null,
+    "CreatedOn": "2023-03-05T00:00:00",
+    "LastModifiedOn": "2023-03-05T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  }
+]

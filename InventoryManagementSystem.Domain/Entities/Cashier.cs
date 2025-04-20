@@ -1,22 +1,17 @@
 ﻿using InventoryManagementSystem.Domain.Common;
+using System;
 
 namespace InventoryManagementSystem.Domain.Entities
 {
-    public class Cashier :BaseAuditableEntity<int>
+    public class Cashier : BaseAuditableEntity<int>
     {
-        public required string Name { get; set; }
-
+        public string Name { get; set; }
         public DateTime HireDate { get; set; }
 
-        public bool IsActive { get; set; }
+        // العلاقة مع Admin
+        public int ? AdminId { get; set; }
+        public virtual Admin Admin { get; set; }
 
-
-        // RelationShip
         public virtual ICollection<Order> Orders { get; set; } = new HashSet<Order>();
-
-        public int AdminId { get; set; }
-        public virtual Admin ManagedBy { get; set; }
-
-        public virtual ICollection<UserPermissions> UserPermissions { get; set; } = new HashSet<UserPermissions>();
     }
 }

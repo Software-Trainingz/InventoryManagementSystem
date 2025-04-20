@@ -11,7 +11,7 @@ namespace InventoryManagementSystem.Domain.Entities
         public float MinimumOrderAmount { get; set; }
         public float AverageRating { get; set; }
         public int EstimatedDeliveryTimeMinutes { get; set; }
-        public bool IsOpen { get; set; }
+        //public bool IsOpen { get; set; }
         public string Address { get; set; }
         public float Latitude { get; set; }
         public float Longitude { get; set; }
@@ -19,7 +19,9 @@ namespace InventoryManagementSystem.Domain.Entities
         public string Email { get; set; }
         public virtual ICollection<WorkingHours> WorkingHours { get; set; } = new HashSet<WorkingHours>();
         public virtual ICollection<Product> Menu { get; set; } = new HashSet<Product>();
-        public int CategoryId { get; set; }
+
+        public virtual ICollection<Order> Orders { get; set; } = new HashSet<Order>();
+        public int ? CategoryId { get; set; }
         public virtual RestaurantCategory Category { get; set; }
 
         // خصائص الربط مع طلبات

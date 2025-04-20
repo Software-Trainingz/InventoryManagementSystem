@@ -17,13 +17,13 @@ namespace InventoryManagementSystem.Domain.Entities
 
         public decimal? TransferCost { get; set; }
 
-        public int ProductId { get; set; }
+        public int ? ProductId { get; set; }
         public virtual Product Product { get; set; }
 
-        public int SourceLocationId { get; set; } // المخزن المصدر
+        public int ? SourceLocationId { get; set; } // المخزن المصدر
         public virtual Location SourceLocation { get; set; }
 
-        public int DestinationLocationId { get; set; } // المخزن الهدف
+        public int ? DestinationLocationId { get; set; } // المخزن الهدف
         public virtual Location DestinationLocation { get; set; }
 
         public int? ResponsibleStaffId { get; set; } // الموظف المسؤول

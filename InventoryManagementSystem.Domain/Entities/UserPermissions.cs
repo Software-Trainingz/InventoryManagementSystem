@@ -20,7 +20,7 @@ namespace InventoryManagementSystem.Domain.Entities
         public bool CanDelete{ get; set; }
 
         // Navigational Property
-        public int AdminId { get; set; }
+        public int ? AdminId { get; set; }
         public virtual Admin Admin { get; set; }
 
         public virtual ICollection<Cashier> Cashiers { get; set; } = new HashSet<Cashier>();

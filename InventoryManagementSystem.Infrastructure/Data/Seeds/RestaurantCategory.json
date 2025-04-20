@@ -1,0 +1,34 @@
+﻿[
+  {
+    "Name": "مطاعم سريعة",
+    "Description": "مطاعم الوجبات السريعة",
+    "ImageUrl": "/images/categories/fast-food.jpg",
+    "DisplayOrder": 1,
+    "TalabatCategoryId": 1001,
+    "CreatedOn": "2023-01-01T00:00:00",
+    "LastModifiedOn": "2023-01-01T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  },
+  {
+    "Name": "مطاعم شرقية",
+    "Description": "مطاعم المأكولات الشرقية والمشويات",
+    "ImageUrl": "/images/categories/eastern-food.jpg",
+    "DisplayOrder": 2,
+    "TalabatCategoryId": 1002,
+    "CreatedOn": "2023-01-01T00:00:00",
+    "LastModifiedOn": "2023-01-01T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  },
+  {
+    "Name": "حلويات",
+    "Description": "محلات الحلويات والمخبوزات",
+    "ImageUrl": "/images/categories/sweets.jpg",
+    "TalabatCategoryId": 1003,
+    "CreatedOn": "2023-01-01T00:00:00",
+    "LastModifiedOn": "2023-01-01T00:00:00",
+    "CreatedBy": "النظام",
+    "LastModifiedBy": "النظام"
+  }
+]

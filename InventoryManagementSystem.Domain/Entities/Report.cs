@@ -19,17 +19,17 @@ namespace InventoryManagementSystem.Domain.Entities
         public required string StoragePath { get; set; }
 
 
-        public int AdminId { get; set; }
+        public int ? AdminId { get; set; }
         public virtual Admin GenerateBy { get; set; }
 
 
         public int InventoryId { get; set; }
         public virtual Inventory Inventory { get; set; }
 
-        public int OrderId { get; set; }
+        public int? OrderId { get; set; }
         public virtual Order Order { get; set; }
 
-        public int ProductId { get; set; }
+        public int? ProductId { get; set; }
         public virtual Product Product { get; set; }
 
 
