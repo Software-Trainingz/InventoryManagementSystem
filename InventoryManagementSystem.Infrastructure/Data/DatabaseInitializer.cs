@@ -1,5 +1,5 @@
 ﻿// Enhanced DatabaseInitializer.cs with improved error handling
-using InventoryManagementSystem.Domain.RepositoryContracts;
+using InventoryManagementSystem.Domain.RepositoryContracts.Infrastucture;
 using InventoryManagementSystem.Infrastucture.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;

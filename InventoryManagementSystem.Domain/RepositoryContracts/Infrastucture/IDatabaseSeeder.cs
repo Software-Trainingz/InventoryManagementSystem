@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InventoryManagementSystem.Domain.RepositoryContracts
+namespace InventoryManagementSystem.Domain.RepositoryContracts.Infrastucture
 {
     public interface IDatabaseSeeder
     {
         Task SeedDatabaseAsync();
-        Task ResetAndSeedDatabaseAsync();
     }
 }

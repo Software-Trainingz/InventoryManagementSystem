@@ -1,10 +1,9 @@
 ﻿// File: InventoryManagementSystem.Infrastructure/DependencyInjection.cs
-using InventoryManagementSystem.Domain.RepositoryContracts;
+using InventoryManagementSystem.Domain.RepositoryContracts.Infrastucture;
 using InventoryManagementSystem.Infrastructure.Data;
 using InventoryManagementSystem.Infrastructure.Json;
+using InventoryManagementSystem.Infrastructure.UnitOfWorks;
 using InventoryManagementSystem.Infrastucture.Data;
-
-
 // Remove typo namespaces
 // using InventoryManagementSystem.Infrastucture.Data;
 // using InventoryManagementSystem.Infrastucture.Json;
@@ -30,8 +29,9 @@ namespace InventoryManagementSystem.Infrastructure // Fixed namespace (was Infra
             // Register Database Seeder
             services.AddScoped<IDatabaseSeeder, DatabaseSeeder>();
             services.AddScoped<IDatabaseInitializer, DatabaseInitializer>();
-
+            services.AddScoped<IUnitOfWork,UnitOfWork>();
             return services;
         }
     }
 }
+  

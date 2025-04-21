@@ -1,5 +1,5 @@
 ﻿using InventoryManagementSystem.Domain.Entities;
-using InventoryManagementSystem.Domain.RepositoryContracts;
+using InventoryManagementSystem.Domain.RepositoryContracts.Infrastucture;
 using InventoryManagementSystem.Infrastructure.Data;
 using InventoryManagementSystem.Infrastucture.Data;
 using Microsoft.EntityFrameworkCore;
@@ -57,7 +57,7 @@ namespace InventoryManagementSystem.Infrastructure.Json
                 var warehouseStaff = await SeedWarehouseStaffAsync(admins);
                 var cashiers = await SeedCashiersAsync(admins);
 
-        //        await SeedEntitiesAsync<DeliveryMethod>("Seeds/DeliveryMethod.json");
+            //   await SeedEntitiesAsync<DeliveryMethod>("Seeds/DeliveryMethod.json");
 
                 // 3. Seed Orders before OrderItems
                 await SeedEntitiesAsync<Order>("Seeds/Order.json");
@@ -92,29 +92,29 @@ namespace InventoryManagementSystem.Infrastructure.Json
         }
 
         // New method to reset and seed the database from scratch
-        public async Task ResetAndSeedDatabaseAsync()
-        {
-            try
-            {
-                // Delete the database
-                await _dbContext.Database.EnsureDeletedAsync();
-                _logger.LogInformation("Database deleted successfully");
+        //public async Task ResetAndSeedDatabaseAsync()
+        //{
+        //    try
+        //    {
+        //        // Delete the database
+        //        await _dbContext.Database.EnsureDeletedAsync();
+        //        _logger.LogInformation("Database deleted successfully");
 
-                // Create a new database and apply migrations
-                await _dbContext.Database.MigrateAsync();
-                _logger.LogInformation("Database created and migrations applied");
+        //        // Create a new database and apply migrations
+        //        await _dbContext.Database.MigrateAsync();
+        //        _logger.LogInformation("Database created and migrations applied");
 
-                // Seed the database in correct order
-                await SeedDatabaseInOrderAsync();
+        //        // Seed the database in correct order
+        //        await SeedDatabaseInOrderAsync();
 
-                _logger.LogInformation("Database reset and seeded successfully");
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error resetting and seeding database");
-                throw;
-            }
-        }
+        //        _logger.LogInformation("Database reset and seeded successfully");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError(ex, "Error resetting and seeding database");
+        //        throw;
+        //    }
+        //}
 
         private async Task SeedDatabaseInOrderAsync()
         {

@@ -36,7 +36,7 @@ namespace InventoryManagementSystem.Infrastucture.Data
         public DbSet<UserPermissions> UserPermissions { get; set; }
         public DbSet<OrderItemOption> OrderItemOptions { get; set; }
         //public DbSet<OptionItem> OptionItems { get; set; }
-   //     public DbSet<DeliveryMethod> DeliveryMethods { get; set; }
+       //public DbSet<DeliveryMethod> DeliveryMethods { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -1,6 +1,6 @@
 ﻿// Enhanced Program.cs with improved error handling
 using InventoryManagementSystem.Core;
-using InventoryManagementSystem.Domain.RepositoryContracts;
+using InventoryManagementSystem.Domain.RepositoryContracts.Infrastucture;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
@@ -50,7 +50,7 @@ namespace InventoryManagementSystem
                 using (var scope = app.Services.CreateScope())
                 {
                     var seeder = scope.ServiceProvider.GetRequiredService<IDatabaseSeeder>();
-                    await seeder.ResetAndSeedDatabaseAsync();
+                    //await seeder.ResetAndSeedDatabaseAsync();
                 }
             }
 

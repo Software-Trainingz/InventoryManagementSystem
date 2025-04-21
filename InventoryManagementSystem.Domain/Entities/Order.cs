@@ -43,6 +43,9 @@ namespace InventoryManagementSystem.Domain.Entities
         // Order items
         public virtual ICollection<OrderItem> OrderItems { get; set; } = new HashSet<OrderItem>();
 
+        //public virtual DeliveryMethod DeliveryMethod { get; set; }
+        //public int ? DeliveryMethodId { get; set; }
+
         // Talabat integration
         public string TalabatOrderId { get; set; }
         public string TalabatOrderStatus { get; set; }
