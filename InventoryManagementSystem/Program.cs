@@ -1,13 +1,13 @@
 ﻿// Enhanced Program.cs with improved error handling
-using InventoryManagementSystem.Core;
+using InventoryManagementSystem.APIs.MiddleWare;
+using InventoryManagementSystem.Application.Service;
+using InventoryManagementSystem.Application.Service.Common;
+using InventoryManagementSystem.Application.ServiceContracts;
+using InventoryManagementSystem.Application.ServiceContracts.Common;
 using InventoryManagementSystem.Domain.RepositoryContracts.Infrastucture;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using System;
-using System.IO;
-using System.Linq;
+using Mapster;
+using Serilog;
 using System.Reflection;
-using System.Threading.Tasks;
 
 namespace InventoryManagementSystem
 {
@@ -16,11 +16,30 @@ namespace InventoryManagementSystem
         public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+         
+            builder.Host.UseSerilog((context, services, configuration) =>
+            {
+                configuration
+               .ReadFrom.Configuration(context.Configuration)
+               .ReadFrom.Services(services);
+
+            });
 
             // Add services to the container
             builder.Services.AddControllers();
             builder.Services.AddOpenApi();
+            builder.Services.AddMapster();
+            builder.Services.AddScoped<IUserManagementService, UserManagementService>();
+            // في بداية الـ ConfigureServices
+            builder.Services.AddScoped<IUserManagementService, UserManagementService>();
 
+            // التسجيل الصحيح للـ ServiceManager
+            builder.Services.AddScoped<IServiceManager>(provider =>
+            {
+                Func<IUserManagementService> userServiceFactory = () =>
+                    provider.GetRequiredService<IUserManagementService>();
+                return new ServiceManager(userServiceFactory);
+            });
             // Register core services
 
             // Load and register infrastructure services
@@ -36,30 +55,25 @@ namespace InventoryManagementSystem
             var app = builder.Build();
 
             // Configure the HTTP request pipeline
-            if (app.Environment.IsDevelopment())
-            {
-                app.MapOpenApi();
-            }
 
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.MapControllers();
 
-            if (app.Environment.IsDevelopment())
-            {
-                using (var scope = app.Services.CreateScope())
-                {
-                    var seeder = scope.ServiceProvider.GetRequiredService<IDatabaseSeeder>();
-                    //await seeder.ResetAndSeedDatabaseAsync();
-                }
-            }
+       
+
+ 
 
             // Initialize database with improved exception handling
             if (app.Environment.IsDevelopment())
             {
+                app.MapOpenApi();
+
                 using var scope = app.Services.CreateScope();
                 try
                 {
+                    var seeder = scope.ServiceProvider.GetRequiredService<IDatabaseSeeder>();
+
                     var initializer = scope.ServiceProvider
                         .GetRequiredService<IDatabaseInitializer>();
 
@@ -69,8 +83,8 @@ namespace InventoryManagementSystem
                     }
                     catch (Exception dbEx)
                     {
-                        var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
-                        logger.LogError(dbEx, "Error during database initialization");
+                        //var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+                        //logger.LogError(dbEx, "Error during database initialization");
                         // Don't rethrow - allow application to start anyway
                     }
                 }
@@ -81,6 +95,13 @@ namespace InventoryManagementSystem
                     // Don't rethrow - allow application to start anyway
                 }
             }
+            else
+            {
+                app.UseExceptionHandlingMiddleware();
+            }
+
+
+            app.UseExceptionHandlingMiddleware();
 
             app.Run();
         }

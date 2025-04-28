@@ -11,13 +11,13 @@ namespace InventoryManagementSystem.Domain.RepositoryContracts.Infrastucture
         where TEntity : BaseAuditableEntity<TKey>
         where TKey : IEquatable<TKey>
     {
-        Task<IEnumerable<TEntity>> GetAllAsync(bool withNoTracking);
+        Task<IEnumerable<TEntity>> GetAllAsync(bool  withNoTracking=false);
         Task<TEntity?> GetAsync(TKey id);
 
         void Add(TEntity entity);
         void Update(TEntity entity);
 
-        void Delete(TEntity entity);
+        void Delete(TEntity  entity);
 
 
     }
